@@ -1,0 +1,6 @@
+[submodule "layout_hello-world"]
+	path = layout_hello-world
+	url = https://github.com/NilsonDev/layout_hello-world
+[submodule "layout_moyo-header"]
+	path = layout_moyo-header
+	url = https://github.com/NilsonDev/layout_moyo-header
