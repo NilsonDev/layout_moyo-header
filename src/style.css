@@ -1,3 +1,104 @@
-body {
+/* 1. Reset básico e fonte Roboto (apenas roman, 500, normal) */
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
+
+/* 1. Reset de margens e box-sizing */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Fonte Roboto, peso 500 */
+body {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+}
+
+/* 3. Variável para azul */
+:root {
+  --blue: #237cff;
+}
+
+/* 4. Header ocupa toda largura e centraliza conteúdo */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32px; /* ajuste conforme o Figma */
+  background: #fff;
+  min-height: 80px; /* só para garantir altura mínima */
+}
+
+/* 5. Logo */
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  margin-right: 40px; /* ajuste conforme o Figma */
+}
+
+.header__logo {
+  height: 40px; /* ajuste conforme o Figma */
+  width: auto;
+}
+
+/* 6. Navegação */
+.nav {
+  flex: 1;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+/* 7. Espaçamento entre itens (sem gap, só margin-left) */
+.nav__item:not(:first-child) {
+  margin-left: 32px; /* ajuste conforme o Figma */
+}
+
+/* 8. Links */
+.nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px; /* altura dos links, ajuste conforme o Figma */
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #222;
+  text-decoration: none;
+  font-size: 16px; /* ajuste conforme o Figma */
+  position: relative;
+  background: none;
+  border: none;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+/* 9. Hover */
+.nav__link:hover {
+  color: var(--blue);
+}
+
+/* 10. Ativo */
+.nav__link.is-active {
+  color: var(--blue);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px; /* ajuste conforme o Figma */
+  background: var(--blue);
+  border-radius: 2px;
+}
+
+/* 11. Remove margin do primeiro e último item */
+.nav__item:first-child {
+  margin-left: 0;
 }
