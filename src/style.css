@@ -10,8 +10,11 @@
 
 /* 2. Fonte Roboto, peso 500 */
 body {
+  margin: 0;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
+  background-color: #fff;
+  color: #333;
 }
 
 /* 3. Variável para azul */
@@ -25,7 +28,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0 32px; /* ajuste conforme o Figma */
-  background: #fff;
+  background: #ffffff;
   min-height: 80px; /* só para garantir altura mínima */
 }
 
