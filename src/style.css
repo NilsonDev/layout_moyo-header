@@ -1,110 +1,79 @@
-/* 1. Reset básico e fonte Roboto (apenas roman, 500, normal) */
+/* 1. Reset básico e fonte Roboto */
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
 
-/* 1. Reset de margens e box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 2. Fonte Roboto, peso 500 */
 body {
-  margin: 0;
   font-family: Roboto, Arial, sans-serif;
   font-weight: 500;
   background-color: #fff;
   color: #333;
 }
 
-/* 3. Variável para azul */
 :root {
   --blue: #237cff;
 }
 
-/* 4. Header ocupa toda largura e centraliza conteúdo */
 .header {
-  max-width: 100%;
   display: flex;
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
   align-items: center;
-  padding: 0 32px; /* ajuste conforme o Figma */
+  padding: 0 16px; /* Ajuste para dispositivos menores */
   background: #fff;
-  min-height: 80px; /* só para garantir altura mínima */
+  min-height: 80px;
 }
 
-/* 5. Logo */
 .header__logo-link {
-  display: flex;
-  align-items: center;
-  margin-right: 40px; /* ajuste conforme o Figma */
+  margin-right: auto; /* Alinha o logo à esquerda */
 }
 
-.header__logo {
-  height: 40px; /* ajuste conforme o Figma */
-  width: auto;
-  overflow-clip-margin: content-box;
-  overflow: clip;
-}
-
-/* 6. Navegação */
 .nav {
   flex: 1;
-  margin-left: 500px;
 }
 
 .nav__list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
   list-style: none;
 }
 
-/* 7. Espaçamento entre itens (sem gap, só margin-left) */
-.nav__item:not(:first-child) {
-  margin-left: 32px; /* ajuste conforme o Figma */
+.nav__item {
+  margin: 8px; /* Espaçamento entre os itens */
 }
 
-/* 8. Links */
 .nav__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height:100%; /* altura dos links, ajuste conforme o Figma */
-  padding: 0;
-  text-align: center;
   text-transform: uppercase;
   color: #222;
   text-decoration: none;
-  font-size: 12px; /* ajuste conforme o Figma */
-  position: relative;
-  background: none;
-  border: none;
+  font-size: 12px;
   transition: color 0.2s;
-  cursor: pointer;
 }
 
-/* 9. Hover */
 .nav__link:hover {
   color: var(--blue);
 }
 
-/* 10. Ativo */
 .nav__link.is-active {
   color: var(--blue);
 }
 
-.nav__link.is-active::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 3px; /* ajuste conforme o Figma */
-  background: var(--blue);
-  border-radius: 2px;
-}
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Muda a direção para coluna em telas menores */
+    align-items: flex-start; /* Alinha itens à esquerda */
+  }
 
-/* 11. Remove margin do primeiro e último item */
-.nav__item:first-child {
-  margin-left: 0;
+  .nav__list {
+    flex-direction: column; /* Muda a direção da lista para coluna */
+    width: 100%; /* Ocupa toda a largura */
+  }
+
+  .nav__item {
+    margin: 4px 0; /* Ajusta o espaçamento entre os itens */
+  }
 }
