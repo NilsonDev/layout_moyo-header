@@ -24,7 +24,7 @@ body {
 
 /* 4. Header ocupa toda largura e centraliza conteúdo */
 .header {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   padding: 0 32px; /* ajuste conforme o Figma */
@@ -42,6 +42,8 @@ body {
 .header__logo {
   height: 40px; /* ajuste conforme o Figma */
   width: auto;
+  overflow-clip-margin: content-box;
+  overflow: clip;
 }
 
 /* 6. Navegação */
@@ -66,13 +68,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px; /* altura dos links, ajuste conforme o Figma */
+  line-height:100%; /* altura dos links, ajuste conforme o Figma */
   padding: 0;
   text-align: center;
   text-transform: uppercase;
   color: #222;
   text-decoration: none;
-  font-size: 16px; /* ajuste conforme o Figma */
+  font-size: 12px; /* ajuste conforme o Figma */
   position: relative;
   background: none;
   border: none;
