@@ -74,6 +74,10 @@ body {
   color: var(--blue);
 }
 
+.nav__link[data-qa="hover"]:hover {
+    color: var(--blue);
+}
+
 /* Media Queries para dispositivos menores */
 @media (max-width: 768px) {
   .header {
