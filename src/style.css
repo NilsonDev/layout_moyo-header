@@ -46,6 +46,7 @@ body {
 }
 
 .nav__link {
+  position: relative;
   text-transform: uppercase;
   color: #222;
   text-decoration: none;
@@ -53,8 +54,20 @@ body {
   transition: color 0.2s;
 }
 
-.nav__link:hover {
+.nav__link::after {
+  content: ' ';
+  width: 0;
+  height: 4px;
+  background-color: #237cff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav__link:hover::after {
   color: var(--blue);
+  width: 100%;
+  transition: 0.5s ease-in-out;
 }
 
 .nav__link.is-active {
