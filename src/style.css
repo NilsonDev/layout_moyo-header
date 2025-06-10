@@ -25,14 +25,18 @@ body {
   padding: 0 16px; /* Ajuste para dispositivos menores */
   background: #fff;
   min-height: 80px;
+
 }
 
 .header__logo-link {
+  width: 300px;
+  margin-left: 50px;
   margin-right: auto; /* Alinha o logo à esquerda */
 }
 
 .nav {
   flex: 1;
+  margin-left: 400px;
 }
 
 .nav__list {
